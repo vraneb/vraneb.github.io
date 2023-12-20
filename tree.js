@@ -8,6 +8,7 @@ let leaves = [
 	{ dest: "co.html", label: "CO" },
 	{ dest: "so2.html", label: "SO2" },
 	{ dest: "effects.html", label: "Effects" },
+	{ dest: "solutions.html", label: "Solutions" },
 	/* END ARTICLE NODE INFO   */
 ];
 
@@ -67,13 +68,13 @@ function draw() {
 			leaves[i].x = width - leaves[i].size;
 			leaves[i].vx *= -1;
 			leaves[i].color = `HSL(${Math.round(
-				Math.random() * 360
+				Math.random() * 360,
 			)}, 80%, 80%)`;
 		} else if (leaves[i].x < leaves[i].size) {
 			leaves[i].x = leaves[i].size;
 			leaves[i].vx *= -1;
 			leaves[i].color = `HSL(${Math.round(
-				Math.random() * 360
+				Math.random() * 360,
 			)}, 80%, 80%)`;
 		}
 		if (leaves[i].y > height - leaves[i].size) {
